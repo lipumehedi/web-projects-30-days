@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Me</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Contact Me</h1>
+
+        <p>Feel free to contact me using the form below.</p>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <form>
+
+            <!-- Name -->
+            <section>
+                <label for="name">Full Name:</label>
+                <br>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+            </section>
+
+            <br>
+
+            <!-- Email -->
+            <section>
+                <label for="email">Email:</label>
+                <br>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </section>
+
+            <br>
+
+            <!-- Phone -->
+            <section>
+                <label for="phone">Phone Number:</label>
+                <br>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                >
+            </section>
+
+            <br>
+
+            <!-- Subject -->
+            <section>
+                <label for="subject">Subject:</label>
+                <br>
+
+                <select id="subject" name="subject">
+
+                    <option value="">Select a subject</option>
+                    <option value="job">Job Opportunity</option>
+                    <option value="project">Project Discussion</option>
+                    <option value="general">General Inquiry</option>
+
+                </select>
+            </section>
+
+            <br>
+
+            <!-- Preferred Contact -->
+            <section>
+                <p>Preferred Contact Method:</p>
+
+                <input
+                    type="radio"
+                    id="email-contact"
+                    name="contact-method"
+                    value="email"
+                >
+
+                <label for="email-contact"> Email</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="phone-contact"
+                    name="contact-method"
+                    value="phone"
+                >
+
+                <label for="phone-contact">   Phone </label>
+            </section>
+
+            <br>
+
+            <!-- Skills -->
+            <section>
+                <p>Topics:</p>
+
+                <input
+                    type="checkbox"
+                    id="python"
+                    name="topic"
+                    value="python"
+                >
+
+                <label for="python">  Python </label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="web"
+                    name="topic"
+                    value="web"
+                >
+
+                <label for="web">  Web Development </label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="sql"
+                    name="topic"
+                    value="sql"
+                >
+
+                <label for="sql">   SQL </label>
+            </section>
+
+            <br>
+
+            <!-- Message -->
+            <section>
+                <label for="message">Message:</label>
+                <br>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    cols="40"
+                    placeholder="Write your message here..."
+                ></textarea>
+            </section>
+
+            <br>
+
+            <!-- Agreement -->
+            <section>
+
+                <input
+                    type="checkbox"
+                    id="agreement"
+                    name="agreement"
+                    required
+                >
+
+                <label for="agreement">  I agree to be contacted.</label>
+
+            </section>
+
+            <br>
+
+            <!-- Buttons -->
+            <button type="submit">Send Message</button>
+            <button type="reset">Reset</button>
+
+        </form>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>© 2026 Mehedi Hasan</p>
+    </footer>
+
+</body>
+
+</html>
+
