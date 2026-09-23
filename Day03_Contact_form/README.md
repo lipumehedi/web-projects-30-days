@@ -1,4 +1,4 @@
-````markdown
+
 # Day 03 - Contact Form
 
 A simple contact form created using HTML5.
@@ -63,5 +63,3 @@ Day-03-contact-form/
 3. Open `index.html` in a web browser.
 
 You can also use **Live Server** in VS Code.
-
-
