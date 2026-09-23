@@ -37,7 +37,7 @@ This project is part of my **30 Days Web Development Projects** challenge.
 Day-04-personal-portfolio/
 │
 ├── index.html
-├── profile.jpg
+├── mehedi.png
 └── README.md
 
 ## 🚀 How to Run
