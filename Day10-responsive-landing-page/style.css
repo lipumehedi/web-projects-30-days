@@ -1,0 +1,228 @@
+/* =========================
+   General
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background-color: #222;
+    color: white;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+/* =========================
+   Button
+========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    background-color: #222;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: #444;
+}
+
+
+/* =========================
+   Destinations
+========================= */
+
+#destinations {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 8%;
+}
+
+#destinations > h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.destination-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.destination-card {
+    flex: 1;
+    min-width: 220px;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.destination-card h3 {
+    margin-top: 0;
+}
+
+.destination-card a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   About
+========================= */
+
+.about {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 50px 8%;
+
+    text-align: center;
+
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   Contact
+========================= */
+
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+
+    background-color: #222;
+    color: white;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+    }
+
+    .destination-container {
+        flex-direction: column;
+    }
+
+}
