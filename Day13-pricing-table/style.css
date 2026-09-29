@@ -1,0 +1,155 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+    padding: 30px 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* Pricing Cards Layout */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* Individual Card */
+.pricing-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Featured Card */
+.featured {
+    border: 2px solid #2563eb;
+}
+
+.badge {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* Card Content */
+.pricing-card h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 25px;
+}
+
+.price span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #64748b;
+}
+
+/* Features List */
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.pricing-card li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+}
+
+/* Button */
+.btn {
+    display: block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .pricing-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+}
