@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="todo-card">
+            <h1>My Tasks</h1>
+            <p class="subtitle">Your tasks, saved automatically.</p>
+
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a task..."
+                    maxlength="200"
+                    required
+                >
+                <button type="submit">Add Task</button>
+            </form>
+
+            <p id="taskCount">0 tasks</p>
+            <ul id="taskList"></ul>
+
+            <button id="clearButton" type="button">
+                Clear All Tasks
+            </button>
+
+            <p id="message" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
