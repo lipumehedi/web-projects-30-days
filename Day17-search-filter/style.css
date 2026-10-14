@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eff6ff;
+    color: #1e293b;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.todo-card {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+#taskForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#taskForm input {
+    flex: 1;
+}
+
+button {
+    padding: 11px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#searchInput {
+    margin-bottom: 15px;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.filter-btn {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.filter-btn.active {
+    background: #2563eb;
+    color: white;
+}
+
+#taskCount {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.task input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.task span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+#emptyMessage {
+    display: none;
+    text-align: center;
+    color: #64748b;
+    padding: 20px 0;
+}
+
+.clear-btn {
+    width: 100%;
+    background: #475569;
+    margin-top: 15px;
+}
+
+#message {
+    min-height: 20px;
+    margin-top: 12px;
+    color: #2563eb;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .todo-card {
+        padding: 22px 16px;
+    }
+
+    #taskForm {
+        flex-direction: column;
+    }
+
+    #taskForm button {
+        width: 100%;
+    }
+
+    .task {
+        flex-wrap: wrap;
+    }
+}
