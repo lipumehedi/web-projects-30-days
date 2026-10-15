@@ -1,0 +1,288 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f9;
+    color: #202938;
+    line-height: 1.5;
+}
+
+.container {
+    width: min(760px, 92%);
+    margin: 40px auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    color: #5267c9;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 8px 0;
+    font-size: clamp(28px, 5vw, 38px);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.subtitle {
+    color: #667085;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px rgba(25, 35, 55, 0.07);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d4d9e2;
+    border-radius: 8px;
+    font: inherit;
+    background: white;
+    color: #202938;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #b9c5ff;
+    border-color: #5267c9;
+}
+
+.form-row,
+.toolbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.form-field {
+    min-width: 0;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    background: #5267c9;
+    color: white;
+}
+
+button:hover {
+    filter: brightness(0.94);
+}
+
+button:focus-visible {
+    outline: 3px solid #9baaff;
+    outline-offset: 2px;
+}
+
+.secondary {
+    background: #e8ebf2;
+    color: #293346;
+}
+
+.danger {
+    background: #c0392b;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    min-height: 20px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #267447;
+}
+
+.toolbar {
+    margin-top: 18px;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 20px 0 14px;
+    color: #667085;
+    font-size: 14px;
+}
+
+.stats strong {
+    color: #202938;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid #edf0f5;
+}
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.task-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-title {
+    overflow-wrap: anywhere;
+    font-weight: 600;
+}
+
+.completed .task-title {
+    text-decoration: line-through;
+    color: #8a93a3;
+}
+
+.task-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: 7px;
+    font-size: 12px;
+    color: #667085;
+}
+
+.priority {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.priority-high {
+    color: #a52a24;
+    background: #fde8e7;
+}
+
+.priority-medium {
+    color: #8a5a00;
+    background: #fff1cc;
+}
+
+.priority-low {
+    color: #216c45;
+    background: #dcf7e8;
+}
+
+.overdue {
+    color: #b42318;
+    font-weight: bold;
+}
+
+.task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.task-actions button {
+    padding: 7px 9px;
+    font-size: 12px;
+}
+
+.edit-button {
+    background: #e8ebf2;
+    color: #293346;
+}
+
+.delete-button {
+    background: #fde8e7;
+    color: #a52a24;
+}
+
+.empty-message {
+    color: #667085;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 14px;
+}
+
+footer {
+    text-align: center;
+    font-size: 13px;
+    color: #667085;
+    padding: 8px 0 20px;
+}
+
+@media (max-width: 520px) {
+    .container {
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .form-row,
+    .toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .task-item {
+        flex-wrap: wrap;
+    }
+
+    .task-actions {
+        width: 100%;
+        padding-left: 30px;
+    }
+}

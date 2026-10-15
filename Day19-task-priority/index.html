@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 19 - Task Priority Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <p class="eyebrow">JAVASCRIPT PROJECT</p>
+            <h1>Task Priority Manager</h1>
+            <p class="subtitle">Plan your work. Focus on what matters.</p>
+        </header>
+
+        <section class="card">
+            <h2 id="formTitle">Add a new task</h2>
+
+            <form id="taskForm">
+                <label for="taskInput">Task name</label>
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="e.g. Practice JavaScript"
+                    maxlength="150"
+                    required
+                >
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="dueDate">Due date</label>
+                        <input type="date" id="dueDate">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="priority">Priority</label>
+                        <select id="priority">
+                            <option value="high">High</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submitButton">
+                        Add Task
+                    </button>
+                    <button type="button" id="cancelButton" class="secondary hidden">
+                        Cancel Edit
+                    </button>
+                </div>
+
+                <p id="message" class="message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Your tasks</h2>
+
+            <label for="searchInput">Search tasks</label>
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search by task name..."
+            >
+
+            <div class="toolbar">
+                <div class="form-field">
+                    <label for="filterSelect">Show</label>
+                    <select id="filterSelect">
+                        <option value="all">All tasks</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="sortSelect">Sort by</label>
+                    <select id="sortSelect">
+                        <option value="priority">Priority: High first</option>
+                        <option value="dueDate">Due date: Earliest first</option>
+                        <option value="newest">Newest first</option>
+                        <option value="oldest">Oldest first</option>
+                        <option value="alphabetical">Task name: A–Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="stats">
+                <span>Total: <strong id="totalCount">0</strong></span>
+                <span>Pending: <strong id="pendingCount">0</strong></span>
+                <span>Completed: <strong id="completedCount">0</strong></span>
+            </div>
+
+            <ul id="taskList" class="task-list"></ul>
+
+            <p id="emptyMessage" class="empty-message">
+                No tasks yet. Add your first task above!
+            </p>
+
+            <button type="button" id="clearAllButton" class="danger full-width">
+                Clear All Tasks
+            </button>
+        </section>
+
+        <footer>
+            <p>Web Projects by Lipu</p>
+        </footer>
+    </main>
+</body>
+</html>
