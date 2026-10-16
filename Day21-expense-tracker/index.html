@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <p class="eyebrow">JAVASCRIPT PROJECT</p>
+            <h1>Personal Expense Tracker</h1>
+            <p class="subtitle">Track your money. Understand your spending.</p>
+        </header>
+
+        <section class="dashboard">
+            <article class="stat-card balance-card">
+                <span>Current Balance</span>
+                <strong id="balanceAmount">¥0</strong>
+            </article>
+
+            <article class="stat-card income-card">
+                <span>Total Income</span>
+                <strong id="incomeAmount">¥0</strong>
+            </article>
+
+            <article class="stat-card expense-card">
+                <span>Total Expenses</span>
+                <strong id="expenseAmount">¥0</strong>
+            </article>
+        </section>
+
+        <section class="card">
+            <h2 id="formTitle">Add a transaction</h2>
+
+            <form id="transactionForm">
+                <label for="description">Description</label>
+                <input
+                    id="description"
+                    type="text"
+                    maxlength="100"
+                    placeholder="e.g. Grocery shopping"
+                    required
+                >
+
+                <div class="form-grid">
+                    <div>
+                        <label for="amount">Amount (¥)</label>
+                        <input
+                            id="amount"
+                            type="number"
+                            min="1"
+                            max="1000000000"
+                            step="1"
+                            placeholder="e.g. 1500"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="type">Transaction type</label>
+                        <select id="type">
+                            <option value="expense" selected>Expense</option>
+                            <option value="income">Income</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="category">Category</label>
+                        <select id="category">
+                            <option value="food">Food</option>
+                            <option value="transport">Transport</option>
+                            <option value="housing">Housing</option>
+                            <option value="salary">Salary</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="health">Health</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="other" selected>Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="date">Date</label>
+                        <input id="date" type="date" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button id="submitButton" type="submit">Add Transaction</button>
+                    <button id="cancelButton" type="button" class="secondary hidden">
+                        Cancel Edit
+                    </button>
+                </div>
+
+                <p id="message" class="message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Transaction History</h2>
+
+            <label for="searchInput">Search transactions</label>
+            <input
+                id="searchInput"
+                type="search"
+                placeholder="Search description..."
+            >
+
+            <div class="filter-grid">
+                <div>
+                    <label for="typeFilter">Type</label>
+                    <select id="typeFilter">
+                        <option value="all">All types</option>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="categoryFilter">Category</label>
+                    <select id="categoryFilter">
+                        <option value="all">All categories</option>
+                        <option value="food">Food</option>
+                        <option value="transport">Transport</option>
+                        <option value="housing">Housing</option>
+                        <option value="salary">Salary</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="health">Health</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="sortSelect">Sort by</label>
+                    <select id="sortSelect">
+                        <option value="newest">Newest date first</option>
+                        <option value="oldest">Oldest date first</option>
+                        <option value="highest">Highest amount first</option>
+                        <option value="lowest">Lowest amount first</option>
+                    </select>
+                </div>
+            </div>
+
+            <p id="resultCount" class="result-count">0 transactions</p>
+
+            <ul id="transactionList" class="transaction-list"></ul>
+
+            <p id="emptyMessage" class="empty-message">
+                No transactions yet. Add your first transaction!
+            </p>
+
+            <button id="clearAllButton" type="button" class="danger full-width">
+                Clear All Transactions
+            </button>
+        </section>
+
+        <footer>
+            <p>Web Projects by Lipu</p>
+        </footer>
+    </main>
+</body>
+</html>
