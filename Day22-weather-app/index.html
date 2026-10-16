@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="weather-app">
+    <header>
+      <p class="eyebrow">WEATHER PROJECT </p>
+      <h1>Weather App ☀️</h1>
+      <p class="subtitle">Discover the weather in any city.</p>
+    </header>
+
+    <form id="searchForm" class="search-form">
+      <label for="cityInput">City name</label>
+      <div class="search-row">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="e.g. Yokohama"
+          autocomplete="off"
+          required
+        >
+        <button type="submit" id="searchButton">Search</button>
+      </div>
+    </form>
+
+    <p id="statusMessage" class="status" role="status" aria-live="polite">
+      Search for a city to see its weather.
+    </p>
+
+    <section id="weatherCard" class="weather-card" hidden>
+      <div class="weather-heading">
+        <div>
+          <p class="eyebrow">CURRENT WEATHER</p>
+          <h2 id="cityName">Yokohama</h2>
+          <p id="weatherDescription">Partly cloudy</p>
+        </div>
+        <span id="weatherIcon" class="weather-icon" aria-hidden="true">🌤️</span>
+      </div>
+
+      <div class="temperature">
+        <span id="temperature">--</span><span>°C</span>
+      </div>
+
+      <p id="updatedTime" class="updated-time"></p>
+
+      <div class="weather-details">
+        <article class="detail">
+          <span>🌡️ Feels like</span>
+          <strong id="feelsLike">-- °C</strong>
+        </article>
+
+        <article class="detail">
+          <span>💧 Humidity</span>
+          <strong id="humidity">--%</strong>
+        </article>
+
+        <article class="detail">
+          <span>💨 Wind speed</span>
+          <strong id="windSpeed">-- km/h</strong>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>Weather data by Open-Meteo</p>
+    </footer>
+  </main>
+</body>
+</html>
