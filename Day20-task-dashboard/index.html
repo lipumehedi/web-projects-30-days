@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 20 - Task Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <p class="eyebrow">JAVASCRIPT PROJECT</p>
+            <h1>My Task Dashboard</h1>
+            <p class="subtitle">Organize tasks. Track your progress.</p>
+        </header>
+
+        <section class="dashboard">
+            <article class="stat-card">
+                <span>Total Tasks</span>
+                <strong id="totalCount">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Pending</span>
+                <strong id="pendingCount">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Completed</span>
+                <strong id="completedCount">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Completion Rate</span>
+                <strong id="completionRate">0%</strong>
+            </article>
+        </section>
+
+        <section class="card progress-card">
+            <div class="progress-heading">
+                <h2>Overall Progress</h2>
+                <span id="progressLabel">0 of 0 completed</span>
+            </div>
+            <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="Task completion progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                id="progressTrack"
+            >
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 id="formTitle">Add a new task</h2>
+
+            <form id="taskForm">
+                <label for="taskInput">Task name</label>
+                <input
+                    id="taskInput"
+                    type="text"
+                    placeholder="e.g. Complete JavaScript practice"
+                    maxlength="150"
+                    required
+                >
+
+                <div class="form-grid">
+                    <div>
+                        <label for="categoryInput">Category</label>
+                        <select id="categoryInput">
+                            <option value="work">Work</option>
+                            <option value="study" selected>Study</option>
+                            <option value="personal">Personal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="priorityInput">Priority</label>
+                        <select id="priorityInput">
+                            <option value="high">High</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="dueDateInput">Due date</label>
+                        <input id="dueDateInput" type="date">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button id="submitButton" type="submit">Add Task</button>
+                    <button id="cancelButton" type="button" class="secondary hidden">
+                        Cancel Edit
+                    </button>
+                </div>
+
+                <p id="message" class="message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Task List</h2>
+
+            <label for="searchInput">Search tasks</label>
+            <input id="searchInput" type="search" placeholder="Search by task name...">
+
+            <div class="filter-grid">
+                <div>
+                    <label for="categoryFilter">Category</label>
+                    <select id="categoryFilter">
+                        <option value="all">All categories</option>
+                        <option value="work">Work</option>
+                        <option value="study">Study</option>
+                        <option value="personal">Personal</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="statusFilter">Status</label>
+                    <select id="statusFilter">
+                        <option value="all">All tasks</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="sortSelect">Sort by</label>
+                    <select id="sortSelect">
+                        <option value="priority">Priority: High first</option>
+                        <option value="dueDate">Due date: Earliest first</option>
+                        <option value="newest">Newest first</option>
+                        <option value="oldest">Oldest first</option>
+                        <option value="alphabetical">Name: A–Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="categorySummary" class="category-summary"></div>
+
+            <ul id="taskList" class="task-list"></ul>
+
+            <p id="emptyMessage" class="empty-message">
+                No tasks yet. Add your first task above!
+            </p>
+
+            <button id="clearAllButton" class="danger full-width" type="button">
+                Clear All Tasks
+            </button>
+        </section>
+
+        <footer>
+            <p>Web Projects by Lipu</p>
+        </footer>
+    </main>
+</body>
+</html>
