@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7-Day Weather Forecast</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">WEATHER PROJECT</p>
+      <h1>Weather Forecast <span>🌤️</span></h1>
+      <p class="subtitle">Plan your week with a 7-day forecast.</p>
+    </header>
+
+    <form id="searchForm" class="search-form">
+      <label for="cityInput">Search for a city</label>
+      <div class="search-row">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Try Yokohama, Tokyo, or Dhaka"
+          autocomplete="off"
+          required
+        >
+        <button id="searchButton" type="submit">Search</button>
+      </div>
+    </form>
+
+    <p id="statusMessage" class="status" role="status" aria-live="polite">
+      Search for a city to see the forecast.
+    </p>
+
+    <section id="forecastSection" hidden>
+      <div class="location-heading">
+        <div>
+          <p class="eyebrow">YOUR LOCATION</p>
+          <h2 id="cityName">Yokohama, Japan</h2>
+          <p id="todayDate" class="muted"></p>
+        </div>
+        <div class="current-summary">
+          <span id="currentIcon" class="current-icon">🌤️</span>
+          <div>
+            <p id="currentTemperature" class="current-temperature">--°C</p>
+            <p id="currentDescription" class="muted">Current weather</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <h2>7-Day Forecast</h2>
+          <p class="muted">Daily minimum and maximum temperatures</p>
+        </div>
+      </div>
+
+      <div id="forecastList" class="forecast-list"></div>
+
+      <p class="data-note">
+        Forecast data by Open-Meteo. Forecasts may change.
+      </p>
+    </section>
+
+    <footer>
+      <p>Built with HTML, CSS, JavaScript and a weather API.</p>
+    </footer>
+  </main>
+</body>
+</html>
