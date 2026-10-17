@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">CURRENCY CONVERTER PROJECT</p>
+      <h1>Currency Converter 💱</h1>
+      <p class="subtitle">
+        Convert currencies with the latest available reference rates.
+      </p>
+    </header>
+
+    <section class="converter">
+      <form id="converterForm">
+        <label for="amount">Amount</label>
+        <input
+          type="number"
+          id="amount"
+          min="0.01"
+          step="any"
+          value="1000"
+          placeholder="Enter amount"
+          required
+        >
+
+        <div class="currency-row">
+          <div class="field">
+            <label for="fromCurrency">From</label>
+            <select id="fromCurrency">
+              <option value="JPY" selected>JPY — Japanese Yen</option>
+              <option value="USD">USD — US Dollar</option>
+              <option value="EUR">EUR — Euro</option>
+              <option value="BDT">BDT — Bangladeshi Taka</option>
+              <option value="GBP">GBP — British Pound</option>
+              <option value="INR">INR — Indian Rupee</option>
+            </select>
+          </div>
+
+          <button
+            type="button"
+            id="swapButton"
+            class="swap-button"
+            aria-label="Swap currencies"
+            title="Swap currencies"
+          >⇄</button>
+
+          <div class="field">
+            <label for="toCurrency">To</label>
+            <select id="toCurrency">
+              <option value="JPY">JPY — Japanese Yen</option>
+              <option value="USD">USD — US Dollar</option>
+              <option value="EUR">EUR — Euro</option>
+              <option value="BDT" selected>BDT — Bangladeshi Taka</option>
+              <option value="GBP">GBP — British Pound</option>
+              <option value="INR">INR — Indian Rupee</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" id="convertButton" class="convert-button">
+          Convert Currency
+        </button>
+      </form>
+
+      <p id="statusMessage" class="status" role="status" aria-live="polite">
+        Enter an amount and convert.
+      </p>
+
+      <section id="resultCard" class="result-card" hidden>
+        <p class="result-label">Converted Amount</p>
+        <h2 id="resultAmount">৳0.00</h2>
+        <p id="conversionSummary" class="conversion-summary"></p>
+        <div class="rate-box">
+          <span>Exchange rate</span>
+          <strong id="exchangeRate">—</strong>
+        </div>
+        <p id="rateDate" class="rate-date"></p>
+      </section>
+    </section>
+
+    <footer>
+      <p>Reference rates by Frankfurter API.</p>
+      <p>Actual bank and money-transfer rates may differ.</p>
+    </footer>
+  </main>
+</body>
+</html>
