@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 25 - Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">KNOWLEDGE PROJECT</p>
+      <h1>Knowledge Quiz 🧠</h1>
+      <p class="subtitle">Test your knowledge and challenge yourself!</p>
+    </header>
+
+    <section id="quizScreen" class="quiz-card">
+      <div class="quiz-top">
+        <span id="questionCounter">Question 1 of 10</span>
+        <span id="scoreLabel">Score: 0</span>
+      </div>
+
+      <div class="progress-track" aria-label="Quiz progress">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <p id="categoryLabel" class="category">JavaScript Basics</p>
+      <h2 id="questionText">Question appears here</h2>
+
+      <div id="answerButtons" class="answer-list"></div>
+
+      <p id="feedback" class="feedback" role="status" aria-live="polite">
+        Choose your answer.
+      </p>
+
+      <button id="nextButton" class="primary-button" disabled>
+        Next Question →
+      </button>
+    </section>
+
+    <section id="resultScreen" class="result-card" hidden>
+      <div class="trophy">🏆</div>
+      <p class="eyebrow">QUIZ COMPLETED</p>
+      <h2 id="resultTitle">Great job!</h2>
+      <p id="finalScore" class="final-score">0 / 10</p>
+      <p id="resultMessage" class="result-message"></p>
+
+      <button id="restartButton" class="primary-button">
+        ↻ Play Again
+      </button>
+    </section>
+
+    <footer>
+      <p>Built with HTML, CSS and JavaScript.</p>
+    </footer>
+  </main>
+</body>
+</html>
