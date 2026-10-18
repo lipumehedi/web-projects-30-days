@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="timer-card">
+        <h1>🍅 Pomodoro Timer</h1>
+        <p class="subtitle">Focus on one thing at a time.</p>
+
+        <div class="session-buttons">
+            <button id="workButton" class="session-button active">
+                Focus
+            </button>
+            <button id="breakButton" class="session-button">
+                Break
+            </button>
+        </div>
+
+        <div class="timer-circle">
+            <div id="timer" class="timer">25:00</div>
+            <p id="sessionLabel">Time to focus!</p>
+        </div>
+
+        <div class="controls">
+            <button id="startButton" class="primary-button">
+                ▶ Start
+            </button>
+            <button id="pauseButton" class="secondary-button">
+                ⏸ Pause
+            </button>
+            <button id="resetButton" class="secondary-button">
+                ↻ Reset
+            </button>
+        </div>
+
+        <div class="session-info">
+            <p>Completed focus sessions</p>
+            <strong id="sessionCount">0</strong>
+        </div>
+
+        <p id="statusMessage" class="status-message" aria-live="polite">
+            Ready when you are!
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
