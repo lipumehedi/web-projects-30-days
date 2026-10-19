@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>📝 My Notes</h1>
+            <p>Capture your thoughts. Keep your ideas safe.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="note-form-card">
+            <h2 id="formHeading">Create a New Note</h2>
+
+            <form id="noteForm">
+                <label for="noteTitle">Note title</label>
+                <input
+                    type="text"
+                    id="noteTitle"
+                    placeholder="Enter note title..."
+                    maxlength="100"
+                    required
+                >
+
+                <label for="noteContent">Note content</label>
+                <textarea
+                    id="noteContent"
+                    rows="5"
+                    placeholder="Write your note here..."
+                    required
+                ></textarea>
+
+                <div class="form-actions">
+                    <button type="submit" id="saveButton" class="primary-button">
+                        + Save Note
+                    </button>
+                    <button type="button" id="cancelButton" class="secondary-button hidden">
+                        Cancel Edit
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="notes-section">
+            <div class="notes-heading">
+                <div>
+                    <h2>My Notes</h2>
+                    <p id="notesCount">0 notes saved</p>
+                </div>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="🔍 Search notes..."
+                    aria-label="Search notes"
+                >
+            </div>
+
+            <p id="statusMessage" class="status-message" aria-live="polite"></p>
+
+            <div id="notesContainer" class="notes-grid"></div>
+
+            <p id="emptyMessage" class="empty-message">
+                No notes yet. Create your first note above!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with HTML, CSS & JavaScript </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
