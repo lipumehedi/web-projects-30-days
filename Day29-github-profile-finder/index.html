@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>🐙 GitHub Profile Finder</h1>
+            <p>Explore GitHub developers and their projects.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <form id="searchForm" class="search-form">
+            <label for="usernameInput">GitHub username</label>
+
+            <div class="search-row">
+                <input
+                    type="text"
+                    id="usernameInput"
+                    placeholder="e.g. octocat"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="searchButton">
+                    Search
+                </button>
+            </div>
+        </form>
+
+        <p id="statusMessage" class="status-message" aria-live="polite"></p>
+
+        <section id="profileSection" class="profile-section hidden">
+            <div class="profile-card">
+                <img id="avatar" class="avatar" alt="GitHub profile avatar">
+
+                <div class="profile-info">
+                    <h2 id="profileName"></h2>
+                    <p id="profileUsername" class="username"></p>
+                    <p id="profileBio" class="bio"></p>
+
+                    <div class="profile-details">
+                        <p id="profileLocation"></p>
+                        <p id="profileCompany"></p>
+                        <p id="profileBlog"></p>
+                        <p id="profileJoined"></p>
+                    </div>
+
+                    <a
+                        id="profileLink"
+                        class="profile-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub Profile ↗
+                    </a>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>Repositories</span>
+                    <strong id="repoCount">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Followers</span>
+                    <strong id="followersCount">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Following</span>
+                    <strong id="followingCount">0</strong>
+                </div>
+            </div>
+
+            <section class="repositories-section">
+                <h2>Recent Public Repositories</h2>
+                <p id="repoStatus" class="repo-status"></p>
+                <div id="repositoriesContainer" class="repositories-grid"></div>
+            </section>
+        </section>
+
+        <section id="welcomeSection" class="welcome-section">
+            <h2>Find a developer</h2>
+            <p>Enter a GitHub username to explore their public profile.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with HTML, CSS & JavaScript </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
