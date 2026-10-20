@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MD Mehedi Hasan's personal developer portfolio and web projects.">
+  <title>Mehedi Hasan | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home">Mehedi<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >☰</button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button">
+          ☾ Dark mode
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">HELLO, WORLD! 👋</p>
+        <h1>I'm <span>Mehedi Hasan</span></h1>
+        <h2>Aspiring Software Developer</h2>
+        <p class="hero-text">
+          I am learning Python, web development and backend technologies.
+          I enjoy building practical projects and improving my coding skills
+          every day.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button primary" href="#projects">Explore Projects</a>
+          <a
+            class="button secondary"
+            href="https://github.com/lipumehedi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >GitHub Profile ↗</a>
+        </div>
+
+        <p class="location">📍 Japan · Open to learning opportunities</p>
+      </div>
+
+      <div class="hero-card">
+        <div class="avatar" aria-hidden="true">MH</div>
+        <h3>Mehedi Hasan</h3>
+        <p>Developer in Progress</p>
+        <div class="mini-tags">
+          <span>Python</span>
+          <span>JavaScript</span>
+          <span>GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <p class="eyebrow">GET TO KNOW ME</p>
+      <h2 class="section-title">About Me</h2>
+      <p class="section-description">
+        I have a Computer Science and Engineering background and experience
+        in manufacturing operations. I am now building my software development
+        skills through consistent practice and hands-on projects.
+        My current focus is Python, backend development, HTML, CSS and JavaScript.
+      </p>
+
+      <div class="stats">
+        <article class="stat-card">
+          <strong>30</strong>
+          <span>Days of Practice</span>
+        </article>
+        <article class="stat-card">
+          <strong>9+</strong>
+          <span>Recent Web Projects</span>
+        </article>
+        <article class="stat-card">
+          <strong>∞</strong>
+          <span>Learning Mindset</span>
+        </article>
+      </div>
+      <p class="small-note">
+        Update these numbers to match your actual completed projects.
+      </p>
+    </section>
+
+    <section class="section container" id="skills">
+      <p class="eyebrow">WHAT I'M LEARNING</p>
+      <h2 class="section-title">My Skills</h2>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <span class="skill-icon">🌐</span>
+          <h3>Frontend</h3>
+          <p>HTML5, CSS3, JavaScript</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-icon">🐍</span>
+          <h3>Programming</h3>
+          <p>Python, Functions, OOP</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-icon">🗄️</span>
+          <h3>Database</h3>
+          <p>SQL, PostgreSQL</p>
+        </article>
+        <article class="skill-card">
+          <span class="skill-icon">🛠️</span>
+          <h3>Developer Tools</h3>
+          <p>Git, GitHub, VS Code</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <p class="eyebrow">WHAT I'VE BUILT</p>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-description">
+        A selection of projects from my web development learning journey.
+      </p>
+
+      <div class="project-grid" id="project-grid">
+        <!-- JavaScript will render project cards here. -->
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-content">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2 class="section-title">Have a project in mind?</h2>
+        <p>
+          Check out my GitHub profile to explore my code and learning projects.
+        </p>
+        <a
+          class="button primary"
+          href="https://github.com/lipumehedi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Visit My GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Mehedi Hasan. Built with HTML, CSS & JavaScript.</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+</body>
+</html>
