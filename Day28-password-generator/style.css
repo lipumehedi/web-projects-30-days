@@ -1,0 +1,218 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+    font-family: Arial, sans-serif;
+    background: #f2f1ff;
+    color: #25243a;
+}
+
+.generator-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 12px 40px rgba(49, 38, 110, 0.12);
+}
+
+.lock-icon {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #77768b;
+    margin-bottom: 28px;
+    font-size: 14px;
+}
+
+.password-box {
+    padding: 16px;
+    background: #f7f6ff;
+    border: 1px solid #e4e0ff;
+    border-radius: 12px;
+}
+
+.password-box > label,
+.length-heading label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.password-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+#passwordOutput {
+    min-width: 0;
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #dcd9ef;
+    border-radius: 8px;
+    background: white;
+    font-size: 15px;
+    color: #39317c;
+}
+
+.copy-button {
+    padding: 0 14px;
+    border: none;
+    border-radius: 8px;
+    background: #e4e0ff;
+    color: #5146c8;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.settings {
+    margin-top: 26px;
+}
+
+.length-heading,
+.strength-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+#lengthValue {
+    color: #5146c8;
+    font-size: 20px;
+}
+
+#lengthSlider {
+    width: 100%;
+    margin-top: 18px;
+    accent-color: #6255d9;
+    cursor: pointer;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #858399;
+}
+
+.settings h2 {
+    font-size: 16px;
+    margin: 26px 0 14px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #efedf6;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.option input {
+    width: 18px;
+    height: 18px;
+    accent-color: #6255d9;
+    cursor: pointer;
+}
+
+.strength-section {
+    margin-top: 24px;
+}
+
+.strength-heading {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+#strengthLabel {
+    color: #77768b;
+}
+
+.strength-track {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #eae8f2;
+}
+
+.strength-fill {
+    width: 0;
+    height: 100%;
+    background: #6255d9;
+    transition: width 0.2s;
+}
+
+.generate-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 26px;
+    border: none;
+    border-radius: 10px;
+    background: #5146c8;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.88;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #9289ff;
+    outline-offset: 3px;
+}
+
+.message {
+    min-height: 20px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #5146c8;
+}
+
+.footer-note {
+    margin-top: 20px;
+    text-align: center;
+    color: #858399;
+    font-size: 12px;
+}
+
+@media (max-width: 420px) {
+    .generator-card {
+        padding: 22px 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #passwordOutput {
+        font-size: 13px;
+    }
+}

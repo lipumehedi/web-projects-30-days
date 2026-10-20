@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="generator-card">
+        <div class="lock-icon">🔐</div>
+
+        <h1>Password Generator</h1>
+        <p class="subtitle">
+            Create a strong, random password.
+        </p>
+
+        <section class="password-box">
+            <label for="passwordOutput">Your password</label>
+
+            <div class="password-row">
+                <input
+                    type="text"
+                    id="passwordOutput"
+                    placeholder="Your password will appear here"
+                    readonly
+                    autocomplete="off"
+                    spellcheck="false"
+                    aria-label="Generated password"
+                >
+
+                <button id="copyButton" class="copy-button" type="button">
+                    Copy
+                </button>
+            </div>
+
+            <p id="copyMessage" class="message" aria-live="polite"></p>
+        </section>
+
+        <section class="settings">
+            <div class="length-heading">
+                <label for="lengthSlider">Password length</label>
+                <strong id="lengthValue">16</strong>
+            </div>
+
+            <input
+                type="range"
+                id="lengthSlider"
+                min="8"
+                max="64"
+                value="16"
+            >
+
+            <div class="range-labels">
+                <span>8 characters</span>
+                <span>64 characters</span>
+            </div>
+
+            <h2>Include characters</h2>
+
+            <label class="option">
+                <input type="checkbox" id="uppercase" checked>
+                <span>Uppercase letters (A–Z)</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="lowercase" checked>
+                <span>Lowercase letters (a–z)</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="numbers" checked>
+                <span>Numbers (0–9)</span>
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="symbols" checked>
+                <span>Symbols (!@#$...)</span>
+            </label>
+
+            <div class="strength-section">
+                <div class="strength-heading">
+                    <span>Password strength</span>
+                    <strong id="strengthLabel">Not generated</strong>
+                </div>
+
+                <div
+                    class="strength-track"
+                    role="progressbar"
+                    aria-label="Estimated password strength"
+                    aria-valuemin="0"
+                    aria-valuemax="4"
+                    aria-valuenow="0"
+                    id="strengthBar"
+                >
+                    <div id="strengthFill" class="strength-fill"></div>
+                </div>
+            </div>
+
+            <button id="generateButton" class="generate-button" type="button">
+                Generate Password
+            </button>
+
+            <p id="statusMessage" class="message" aria-live="polite"></p>
+        </section>
+
+        <p class="footer-note">
+            Tip: Use a unique password for every account.
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
